@@ -8,6 +8,180 @@ html
       link(href='styles.css'  rel='stylesheet' type='text/css')
     body
       section.slides.layout-regular.template-default
+
+        section.slides.layout-regular.template-default
+        article.first
+          h1(style="font-size:180px;") 🔥 Everything Down & Use Flex
+          br
+          a(href='http://mikemaccana.com') mikemaccana.com
+          a(href='http://twitter.com/mikemaccana') @mikemaccana
+
+        article
+          h1 Stages of CSS developer
+
+        article
+          h1 Stage 1
+          p Style it till it works
+
+        article
+          h1 Stage 2
+          p Understand limits of CSS, and hack around them
+
+        article
+          h1 Stage 3
+          p Develop tools to maintian styling
+
+        article
+          h1 Large chunks of CSS are hacks
+          p What do we mean by hacks?
+          p Most things for alignment purposes
+
+        article.old-tools
+          h1 Hacks are so common we no longer think of them as hacks
+          ul.build.flex
+          li
+            span margin: 0 auto;
+            br
+            small Nothing to do with margins
+          li
+            span display: inline-block;
+            br
+            small Not actually an inline-block
+            br
+            small Suddenly whitespace matters
+            br
+            small So font-size: 0;
+          li
+            span display: table-cell
+            br
+            small Not a table cell
+          li
+            span overflow: hidden; used to give a block layout and prevent it from collapsing
+            br
+            small Not actually controlling overflow
+          li
+            span margin: -20px;
+            br
+            small Indirect and weirdly illogical
+
+        article
+          h1 What do we want?
+          p Avodi collissions and overrides
+          p Reusability - ability to move things and have them still look right
+          ul Ablity to work quickly
+            li Element styled in one place (SASS, HTML)
+            li Element styled using predictable rule
+          p High signal:noise ratio when reading
+
+        article
+          h1 CSS frameworks
+
+        article
+          h1 Bootstrap
+          p Visual styling of element mixed in with classname
+          p You are probably not.
+          p Redundant classes which reflects element names.
+          p Negative margin grid system
+          h2 hacks
+          p before elements with "" content displayed as table
+          p Styling in class names - suddenly an elements appearance can be set in either HTML or CSS
+          p Putting two things beside each other is 'col-sm-4 m-b-lg'
+
+
+        article
+          h1 BEM
+          p Overloads the existing term 'block' to mean 'component'
+          small How do you talk about blocks to BEM developers?
+          p Repeats styling in class name, since a BEM 'block' or BEM 'element' often duplicate actual elements.
+          p Assumes widget / element mismatch
+
+        article
+          h1 Frameworks make it worse, not better
+          p Hacks for browsers nobody is paying you to support
+          small Extra styling, wrappers and containers everywhere
+          p Styling in class names
+          p Duplication
+          p Can't predict a class name an element will use
+
+        article
+          h1 Seperation of concerns?
+          p Actually just seperation of technologies
+          ul
+          li In JavaScript, this is the login button
+          li In HTML, this is the login button
+          li In CSS, this is the login button
+
+        article
+          h1 Frameworks are fine for the companies that make them
+          p Twitter is a NASDAQ listed company with near-unlimited resources to make it's products work for users on ancient browsers.
+
+        article
+          h2 What if we didn't need all the hacks
+          p Flex isn't just another fix for CSS brokenness
+
+        article
+          h2 Flex is a sensible default
+
+        article
+          h1 Stage 4
+          p Abandon hacks
+
+        article
+          h1 "the solution to being bad at writing big things, is to not write big things." - @seldo #nodevember
+
+        article
+          h1 AMAZING NEW FRAMEWORK
+
+        article
+          h1 SASS and Flex
+          p As little as possible
+
+        article
+          h1 Use SASS
+          h3 Have a small amount of basic styles
+          h3 Style everything else under their higher level component
+          p Use an element name if it exists. section, p, q, button, footer, input
+          p Add a class if there's not already an element (.avatar, .feature)
+          h3 Do not put visual information in class name (and thus in your HTML)
+          h3 Use mixins to share behavior
+
+        article
+          h2 Use Flex by default
+          h3 Flex syntax not relevant day-to-day
+          p You'll probably keep using the same flex mixins
+
+        article
+          h1 Designing
+          p Use flex
+          p Every rectangle: in your design is a block.
+          p Decide how you want
+
+        article
+          h2 Moving an existing codebase
+          p Replace individual sections with flex
+          p
+
+
+        article
+          h1 What do we get
+          p Higher signal-noise
+          p Know styling is in stylesheet
+          p Know where in stylesheet to look
+          small 'footer .links'
+          p All styling is deliberate
+          small not side effects
+
+        article
+          h1 Handling specificity - classes more specific than elements
+          p Hence style things relative to their component
+
+        article
+          h1 No 'container' or 'wrapper' divs
+          p Flex means you shouldn't need to use these
+          p If you are adding blocks that aren't in your design - containers, wrappers etc. - you are performing some kind of hack. This should evaluated.
+          p Avoid overflow, display: table, margin auto hacks.
+
+
         article.first
           h1(style="font-size:180px;") Modern<br>Workflow<br>&amp; Tooling
           p 🔥 Tasty Tooling Tips
