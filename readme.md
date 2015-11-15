@@ -1,7 +1,9 @@
-# Modern Workflow + Tooling
+# Burn Everything Down & Use Flex
 
-These are the slides to my talk - they might not make a ton of sense without the talk, but you are welcome to look at them. 
+## Running
 
-Built with Gulp, Jade, Stylus and Browsersync. Take a look! 
+	npm install
 
-View at [wesbos.github.io/Modern-Workflow-and-Tooling-Talk](http://wesbos.github.io/Modern-Workflow-and-Tooling-Talk). Use your `←` and `→` keys to move through the slides. 
+	gulp
+
+## Based on https://github.com/wesbos/Modern-Workflow-and-Tooling-Talk and http://code.google.com/p/html5slides/
