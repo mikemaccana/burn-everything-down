@@ -1,6 +1,6 @@
 @import "_deps"
 
-yellow = #FFDD00
+main-color = whitesmoke
 orange = #FF9D00
 
 html {
@@ -18,7 +18,7 @@ html {
     width 100%
     height 100%
     position absolute
-    filter grayscale(100%) contrast(160%)
+    filter grayscale(100%) contrast(60%)
     background:url(images/3.jpg); // blacksmith
     background-size cover
     top 0
@@ -38,11 +38,18 @@ html {
     &:before, &:after
       display none
 
-.slides > article:nth-child(5n+1):after    
+.slides > article:nth-child(5n+1):after
     background-image linear-gradient(-208deg, #81af9b 0%, #7aa8ac 27%, #6693da 100%)
 
-.slides > article:nth-child(5n+2):after    
+.slides > article:nth-child(5n+2):after
     background-image: linear-gradient(-132deg, #FFDD00 0%, #6DD7BA 100%);
+
+.slides > article.hacks
+  &:before
+    background-image url("images/massive-hacks.jpg") !important
+    background-size contain
+  &:after
+    opacity 0.1
 
 
 .slides > article.old-tools
@@ -59,51 +66,48 @@ random(min,max)
 randomColor()
   return rgb(random(0,255),random(0,255),random(0,255))
 
-combos = (#825854 #3de7e4) (#29519e #94eced) (#e26ab5 #1e4823) (#11feec #FF00E0) (#006C8D #006C8D) (#3a5c8e #eb821b) (#ca5723 #7d5794) (#6aa4e1 #ae5ceb) (#226443 #5e9ccd) (#6d6528 #3768f7) (#2decf5 #52aeea) (#d07dd7 #e1e34a) (#3456fd #14e839) (#f8078c #17156b)
+combos = (#4F7756 #010101) (#55AD7A #010101) (#90F86F #010101) (#25DC2E #000000)
 
 randomGradient()
-  n = random(1,13)
+  n = random(0,3)
   combo = combos[n]
   return combo
-  
+
 for num in 1...40
   path = "images/"+ random(1,10)+".jpg"
   combo = randomGradient();
   .slides > article:nth-child(39n+{num})
     &:before
-      background-image url(path) 
+      background-image url(path)
       content combo[1]
-    &:after    
+    &:after
       background-image linear-gradient(random(0,360)deg, combo[1] 0%, combo[0] 100%);
-  
 
-// .slides > article:nth-child(1n):after    
-//     background-image: linear-gradient(-173deg, #007EFF 0%, #6DD7BA 51%);
 
 h1,h2,h3,h4,h5,h6
-  font-family bangers
+  font-family "Lato"
+  color: whitesmoke;
   font-weight 100
   letter-spacing 1px
   line-height 1
   text-shadow 5px 5px 0 rgba(0,0,0,0.3)
   margin 15px 0
- 
+
 p, a, li
   text-shadow 4px 3px 0 rgba(0,0,0,0.3)
   margin 15px 0
 
 p, li, small
   color white
-  font-size 50px  
+  font-size 50px
   font-weight 700
 
 small
   font-size 25px
 
 h1
-  transform skew(0, -8deg)
   font-size 120px
-  color yellow
+  color main-color
   a
     text-decoration none
     font-size 20px
@@ -112,7 +116,7 @@ h1
 
 h2
   font-size 200px
-  color yellow
+  color main-color
   line-height 1
   margin 0
 
@@ -127,11 +131,11 @@ h2
 
 h3
   font-size 70px
-  color yellow
+  color main-color
   line-height 1.5
 
 h4
-  color yellow
+  color main-color
   font-size 50px
 
 .halves
@@ -150,18 +154,18 @@ img.high
   width auto
   height 100%
   max-height 1200px
-  
+
 .hl
-  color yellow
+  color main-color
 
 article.treats
   h1
     margin-bottom 90px
     font-size 250px
     color orange
-    
-    
-.flex 
+
+
+.flex
   display flex !important
   & > *
     flex 1
