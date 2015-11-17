@@ -9,6 +9,9 @@ html
     body
       section.slides.layout-regular.template-default
 
+        article
+          small Yaay the projector works
+
         section.slides.layout-regular.template-default
         article.first
           h1(style="font-size:96px; text-transform: uppercase") Burn Everything Down<br/> & Use Flex
@@ -33,7 +36,7 @@ html
           h3 Built stuff for Google, Microsoft, <br/>and a whole bunch of startups.
 
         article
-          img.high(src="images/certsimple.png", style="height: 800px")
+          video(src="images/certsimple-live-validation-full.mp4" loop autoplay)
           h2 CertSimple
 
         article.plain
@@ -42,12 +45,12 @@ html
             a(href="http://certsimple.com", style="color: white; font-size: 96px") certsimple.com
 
         article
-          h1 How I style things
-          h3 This talk is about styling<br>I hope it will improve your styling.
+          h1 How I currently style things
+          h3 I hope it will improve your styling.
 
 
         article
-          h1 Stages of CSS developer
+          h1 Evolution of a web developer
 
         article
           h1 Stage 1
@@ -55,7 +58,7 @@ html
 
         article
           h1 Stage 2
-          p Understand limits of CSS, and hack around them
+          p Understand CSS, it's limits, and hack around them
 
         article
           img.high(src="images/you-are-here.png", style="height: 200px")
@@ -236,6 +239,17 @@ html
           p Decide how you want the block to flow and let flex do the work
 
         article
+          h1 Reflowing for mobile
+          .halves.build
+            .half
+              img(src="images/mobile.png")
+              p Mobile
+            .half
+              img(src="images/desktop.png")
+              p Desktop
+              p CSS nth child, Flex row-reverse
+
+        article
           h1 Example
           p How do I put my product features beside each other?
           p .features, specify width, put them beside each other
@@ -259,8 +273,11 @@ html
           small not side effects of hacks
 
         article
+          h2.big The point
+
+        article
           h1 Current web standards and preprocessors have what you want
-          h3 Currently used for most of certsimple.com
+          h3 Currently used in production on CertSimple
 
         article
           h1.big Questions?
