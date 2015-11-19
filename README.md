@@ -1,6 +1,6 @@
 # Burn Everything Down & Use Flex
 
-Burn everything down and use flex by default
+This talk is online at [Burn everything down and use flex by default](http://mikemaccana.github.io/burn-everything-down/#1)
 
 It's 2015. Floats? Centering with margin: auto? overflow for things that don't overflow? Displaying blocks as table cells?
 
@@ -19,6 +19,6 @@ Mike is the founder of CertSimple, which does fast, painless EV SSL. He's built 
 
 	gulp
 
-## Thanks
+## Credits
 
-Based on https://github.com/wesbos/Modern-Workflow-and-Tooling-Talk and http://code.google.com/p/html5slides/
+Thanks to [Wes Bos](http://wesbos.com/) for his https://github.com/wesbos/Modern-Workflow-and-Tooling-Talk, the deck of which was used to produce this talk. This is in turn uses http://code.google.com/p/html5slides/.
